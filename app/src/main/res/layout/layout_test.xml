@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/nav_header_vertical_spacing"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="5dp">
+
+        <com.ych.ychbase.widget.CountDownEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isVisible="false"
+            app:hint="搜索内容"
+            app:maxValue="150" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.ych.ychbase.widget.CountDownEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisible="false"
+        app:hint="搜索内容"
+        app:maxValue="150" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

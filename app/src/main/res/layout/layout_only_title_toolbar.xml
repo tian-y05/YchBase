@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_layout"
+    style="@style/YchToolbarStyle" >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        style="@style/YchToolbarTitleTextStyle"
+        android:layout_gravity="center" />
+
+</androidx.appcompat.widget.Toolbar>

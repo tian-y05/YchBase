@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="YchToolbarEndIconStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginStart">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:layout_marginEnd">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:layout_gravity">center|end</item>
+    </style>
+
+    <style name="YchToolbarEndTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginStart">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:layout_marginEnd">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_gravity">end|center</item>
+    </style>
+</resources>

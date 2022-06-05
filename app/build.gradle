@@ -1,0 +1,142 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "com.blankj.bus"
+apply plugin: 'maven'
+
+android {
+    signingConfigs {
+        config {
+            storeFile file('./ych_base.jks')
+            storePassword 'ych2020'
+            keyAlias 'ych_base'
+            keyPassword 'ych2020'
+        }
+    }
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersionId
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode  rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","x86_64"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    dataBinding {
+        enabled true
+    }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = 'com.ych.ychbase'
+            pom.artifactId = "YchBase"
+            pom.version = rootProject.ext.android.versionName
+            repository(url: uri("../maven"))
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation project(path: ':BGAPhotoPicker')
+
+    testApi 'junit:junit:4.13'
+    androidTestApi 'androidx.test.ext:junit:1.1.1'
+    androidTestApi 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // kotlin
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // supportLib
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.core_ktx
+    api rootProject.ext.dependencies.supportV4
+    api rootProject.ext.dependencies.material
+    api rootProject.ext.dependencies.cardview
+    api rootProject.ext.dependencies.recyclerview
+    api rootProject.ext.dependencies.constraintlayout
+
+    // lifecycle
+    api rootProject.ext.dependencies.lifecycle
+
+    // navigation
+    api rootProject.ext.dependencies.navigation
+
+    // paging
+    implementation 'androidx.paging:paging-runtime:2.1.2'
+    testImplementation 'androidx.paging:paging-common:2.1.2'
+    implementation 'android.arch.paging:rxjava2:1.0.1'
+
+    // coroutines
+    api rootProject.ext.dependencies.coroutines
+
+    // RxJava
+    implementation rootProject.ext.dependencies.rxJava
+    implementation rootProject.ext.dependencies.rxAndroid
+
+    // swipeRecyclerView
+    implementation rootProject.ext.dependencies.swipeRecyclerView
+
+    // coil
+    implementation rootProject.ext.dependencies.coil
+    // 图片剪裁
+    implementation rootProject.ext.dependencies.android_crop
+
+    // indicator
+    implementation rootProject.ext.dependencies.magic_indicator
+
+    // utilCode
+    api rootProject.ext.dependencies.utilCode
+
+    // 空布局，网络错误布局
+    api rootProject.ext.dependencies.statusManager
+
+    // 九宫格图片
+    api rootProject.ext.dependencies.photoPicker
+    annotationProcessor rootProject.ext.dependencies.glideAnnotation
+
+    // 高德地图
+    implementation rootProject.ext.dependencies.aMap
+    // 极光推送
+    api rootProject.ext.dependencies.jPush
+
+    // Zxing
+    implementation rootProject.ext.dependencies.zxing
+
+    // bugly
+    api rootProject.ext.dependencies.bugly
+
+    api 'org.greenrobot:eventbus:3.2.0'
+
+}

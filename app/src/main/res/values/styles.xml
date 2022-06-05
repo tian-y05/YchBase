@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="YchTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- 底部导航栏的颜色 -->
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/navigationBarColor</item>
+    </style>
+
+    <style name="YchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/colorPageBackground</item>
+    </style>
+
+    <style name="YchDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="YchBackStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="srcCompat">@mipmap/icon_back</item>
+    </style>
+
+    <style name="YchToolbarBackStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="srcCompat">@mipmap/icon_back</item>
+    </style>
+
+    <style name="YchBigBtnStyle">
+        <item name="android:layout_width">270dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_big_btn</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="YchSmallBtnStyle">
+        <item name="android:layout_width">145dp</item>
+        <item name="android:layout_height">37dp</item>
+        <item name="android:background">@drawable/selector_big_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="YchToolbarStyle">
+        <item name="android:layout_width">match_parent</item>
+<!--        <item name="android:layout_height">?android:actionBarSize</item>-->
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <style name="YchToolbarTitleTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="YchDrawableStartTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
+    </style>
+
+    <style name="YchLlDividerStyle">
+        <item name="divider">@color/colorDivider</item>
+        <item name="dividerPadding">@dimen/nav_header_vertical_spacing</item>
+        <item name="showDividers">middle|none</item>
+    </style>
+
+    <style name="YchToolbarEndIconStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginLeft">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:layout_marginRight">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:layout_gravity">center|end</item>
+    </style>
+
+    <style name="YchTabLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="tabIndicator">@drawable/tab_indicator</item>
+        <item name="tabIndicatorHeight">3.5dp</item>
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabTextColor">@color/colorDetailText</item>
+        <item name="tabSelectedTextColor">@color/colorTextBlack</item>
+    </style>
+
+    <style name="YchToolbarEndTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginLeft">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:layout_marginRight">@dimen/nav_header_vertical_spacing</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_gravity">end|center</item>
+    </style>
+
+    <style name="customTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_btn_orange</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="AnimTopMiddle" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/top_middle_in</item>
+        <item name="android:windowExitAnimation">@anim/top_middle_out</item>
+    </style>
+
+    <style name="YchEditTextStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#EDEDED</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+</resources>

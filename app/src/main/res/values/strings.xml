@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="network_error">网络不给力</string>
+    <string name="count_down_hint">%1$d秒后重新获取</string>
+    <string name="re_get">重新获取验证码</string>
+    <string name="re_login">登录过期,请重新登录</string>
+    <string name="permission_apply_hint">使用此功能请同意权限申请</string>
+    <string name="empty_hint">暂无数据</string>
+    <string name="take_photo">照片上传</string>
+    <string name="open_gallery">从相册选取</string>
+    <string name="confirm">确定</string>
+    <string name="search">搜索</string>
+    <string name="cancel">取消</string>
+    <string name="wait_please">请稍后…</string>
+    <string name="scan_barcode">扫描条码</string>
+    <string name="no_camera">当前系统未找到相机</string>
+    <string name="camera_hardware_no_support">相机硬件不支持新特性</string>
+    <string name="picture_save_success">图片已保存：</string>
+    <string name="picture_save_failed">图片保存失败</string>
+    <string name="parse_success">解析成功</string>
+    <string name="et_min_limit">0</string>
+    <string name="bias">/</string>
+    <string name="tips">提示</string>
+    <string name="package_install_permission">安装应用需要打开未知来源权限，请去设置中开启权限</string>
+    <string name="loading_wait_please">正在加载，请稍后…</string>
+    <string name="no_more_data">已经到底了</string>
+    <string name="copy_success">复制成功</string>
+    <string name="notification_hint">请在“通知”中打开通知权限</string>
+    <string name="to_setting">去设置</string>
+</resources>
